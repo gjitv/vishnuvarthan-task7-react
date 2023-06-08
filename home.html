@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>GJ Global IT Ventures</title>
+</head>
+<body>
+    <div class="bg-cyan-400">
+        <nav class="bg-white shadow p-5 md:flex md:items-center md:justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xl flex font-Poppins cursor-pointer items-center">
+              <img class="h-10 pe-4 inline cursor-pointer" src="./assets/gjimg.jfif" />
+              GJ GLOBAL IT VENTURES
+            </span>
+            <span class="text-2xl cursor-pointer md:hidden block mx-4">
+              <ion-icon onclick="Menu(this)" name="menu-outline"></ion-icon>
+            </span>
+          </div>
+          <div>
+            <ul
+              class="md:flex md:items-center z-0 md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-4 md:opactity-0 opacity-100 top-[-400px] transition-all ease-in duration-500 bg-white">
+              <li class="mx-4 md:my-0 my-6">
+                <a class="text-l duration:500 hover:text-cyan-400" href="#">HOME</a>
+              </li>
+              <li class="mx-4 md:my-0 my-6">
+                <a class="text-l duration:500 hover:text-cyan-400 " href="#">ABOUT</a>
+              </li>
+              <li class="mx-4 md:my-0 my-6">
+                <a class="text-l duration:500 duration:500 hover:text-cyan-400 " href="#">SERVICES</a>
+              </li>
+              <li class="mx-4 md:my-0 my-6">
+                <a class="text-l  hover:text-cyan-400 " href="#">CONTACT</a>
+              </li>
+              <li class="mx-4 md:my-0 my-6">
+                <a class="text-l duration:500 hover:text-cyan-400" href="#">LOGIN</a>
+              </li>
+              <button class="bg-cyan-400 px-5 py-2 text-white font-Poppins mx-4 duration:500 hover:bg-cyan-500 rounded">Get
+                Started</button>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div style="margin: 30px 0px; font-size: 2rem;font-weight: bold;">CHOOSE YOUR DESIRED FIELD </div>
+      <div style="display: flex; flex-direction: column;">
+        <div class="" id="check" style="font-size:1.5rem; padding: 0px 20px; width: 50%;"></div>
+      </div>
+      <div style="margin: 20px 0px;">
+        <button class="bg-gray-400 px-5 py-2 text-white font-Poppins mx-4 duration:500 hover:bg-gray-500 rounded"onclick= cricket()>Suresh Raina</button>
+      </div>
+      <div id="demo" style="padding: 20px;"></div>
+      
+
+
+      <script>
+        const checklist=["Information technology","Computer Science","Data Science","E commerce","Web Development","Web Testing"]
+        const checklistmain= checklist.map(checkFunction);
+        const heartpat= heart()
+        document.getElementById("check").innerHTML =checklistmain;
+        function checkFunction(value, index, array){
+          let res=''
+          res+= (index +1) + ". " + value + "</br>"
+          return res
+        }
+        //
+        function heart(){
+          var n = 12;
+            var hrt = "";
+            for (let i = n / 2; i < n; i += 2) {
+
+            for (let j = 1; j < n - i; j += 2) {
+                hrt += " ";
+            }
+            
+            for (let j = 1; j < i + 1; j++) {
+                hrt += "*";
+            }
+            for (let j = 1; j < n - i + 1; j++) {
+                hrt += " ";
+            }
+            for (let j = 1; j < i + 1; j++) {
+                hrt += "*";
+            }
+            hrt += "\n";
+            }
+            for (let i = n; i > 0; i--) {
+            for (let j = 0; j < n - i; j++) {
+                hrt += " ";
+            }
+            for (let j = 1; j < i * 2; j++) {
+                hrt += "*";
+            }
+            hrt += "\n";
+            }
+            console.log(hrt);
+            return hrt;
+        }
+
+        const player1={
+          name:"dhoni",
+          age:"41",
+          role:"captian",
+          trophies:"12",
+        }
+        cricket=(val)=>{
+          for(let x in val){
+            return x + " " + x.value;
+          }
+        }
+        document.getElementById("demo").innerHTML= a;
+      </script>
+
+</body>
+</html>
