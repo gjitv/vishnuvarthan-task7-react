@@ -103,3 +103,17 @@ input{
     color: white;
     cursor: pointer;
 }
+
+@media only screen and (max-width:570px){
+    .container{
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .form-container{
+        width: auto;
+    }
+    .headcont{
+        width: auto;
+    }
+}
